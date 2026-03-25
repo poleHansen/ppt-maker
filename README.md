@@ -1,0 +1,2 @@
+# ppt-maker
+make ppt
