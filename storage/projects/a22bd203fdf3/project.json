@@ -1,0 +1,17 @@
+{
+  "id": "a22bd203fdf3",
+  "name": "查询天气",
+  "language": "zh-CN",
+  "output_format": "ppt169",
+  "template_strategy": "template_light",
+  "input_mode": "intent_mode",
+  "model_profile_id": null,
+  "status": "draft",
+  "created_at": "2026-03-25T15:43:42.859007",
+  "updated_at": "2026-03-25T15:43:42.860374",
+  "project_path": "D:\\code\\ppt-maker\\storage\\projects\\查询天气_ppt169_20260325",
+  "brief": null,
+  "outline": [],
+  "slides": [],
+  "export_file": null
+}

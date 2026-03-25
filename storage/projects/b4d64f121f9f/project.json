@@ -1,0 +1,180 @@
+{
+  "id": "b4d64f121f9f",
+  "name": "中期答辩",
+  "language": "zh-CN",
+  "output_format": "ppt169",
+  "template_strategy": "template_light",
+  "input_mode": "intent_mode",
+  "model_profile_id": null,
+  "status": "svg_ready",
+  "created_at": "2026-03-25T16:16:50.577453",
+  "updated_at": "2026-03-25T16:18:09.069011",
+  "last_exported_at": null,
+  "project_path": "D:\\code\\ppt-maker\\storage\\projects\\中期答辩_ppt169_20260326",
+  "brief": {
+    "audience": "答辩",
+    "goal": "完成中期答辩题目是基于CLIP的路面裂缝分割研究",
+    "scenario": "答辩",
+    "style": "学术答辩风",
+    "page_count": 10,
+    "must_have": [],
+    "avoid": [],
+    "source_text": ""
+  },
+  "sources": [],
+  "outline": [
+    "背景与目标：完成中期答辩题目是基于CLIP的路面裂缝分割研究",
+    "对象与场景：答辩 / 答辩",
+    "关键论点与支撑证据",
+    "实施路径与里程碑",
+    "结论与行动建议"
+  ],
+  "slides": [
+    {
+      "page": 1,
+      "title": "封面与结论先导",
+      "objective": "围绕“完成中期答辩题目是基于CLIP的路面裂缝分割研究”推进第 1 页的信息表达",
+      "bullets": [
+        "服务对象：答辩",
+        "使用场景：答辩",
+        "风格方向：学术答辩风"
+      ],
+      "visual_hint": "咨询风信息卡片 + 结构化图形"
+    },
+    {
+      "page": 2,
+      "title": "问题背景与机会窗口",
+      "objective": "围绕“完成中期答辩题目是基于CLIP的路面裂缝分割研究”推进第 2 页的信息表达",
+      "bullets": [
+        "服务对象：答辩",
+        "使用场景：答辩",
+        "风格方向：学术答辩风"
+      ],
+      "visual_hint": "咨询风信息卡片 + 结构化图形"
+    },
+    {
+      "page": 3,
+      "title": "用户/对象画像",
+      "objective": "围绕“完成中期答辩题目是基于CLIP的路面裂缝分割研究”推进第 3 页的信息表达",
+      "bullets": [
+        "服务对象：答辩",
+        "使用场景：答辩",
+        "风格方向：学术答辩风"
+      ],
+      "visual_hint": "咨询风信息卡片 + 结构化图形"
+    },
+    {
+      "page": 4,
+      "title": "核心方案结构",
+      "objective": "围绕“完成中期答辩题目是基于CLIP的路面裂缝分割研究”推进第 4 页的信息表达",
+      "bullets": [
+        "服务对象：答辩",
+        "使用场景：答辩",
+        "风格方向：学术答辩风"
+      ],
+      "visual_hint": "咨询风信息卡片 + 结构化图形"
+    },
+    {
+      "page": 5,
+      "title": "关键页面示意",
+      "objective": "围绕“完成中期答辩题目是基于CLIP的路面裂缝分割研究”推进第 5 页的信息表达",
+      "bullets": [
+        "服务对象：答辩",
+        "使用场景：答辩",
+        "风格方向：学术答辩风"
+      ],
+      "visual_hint": "咨询风信息卡片 + 结构化图形"
+    },
+    {
+      "page": 6,
+      "title": "实施节奏与分工",
+      "objective": "围绕“完成中期答辩题目是基于CLIP的路面裂缝分割研究”推进第 6 页的信息表达",
+      "bullets": [
+        "服务对象：答辩",
+        "使用场景：答辩",
+        "风格方向：学术答辩风"
+      ],
+      "visual_hint": "咨询风信息卡片 + 结构化图形"
+    },
+    {
+      "page": 7,
+      "title": "价值评估与风险控制",
+      "objective": "围绕“完成中期答辩题目是基于CLIP的路面裂缝分割研究”推进第 7 页的信息表达",
+      "bullets": [
+        "服务对象：答辩",
+        "使用场景：答辩",
+        "风格方向：学术答辩风"
+      ],
+      "visual_hint": "咨询风信息卡片 + 结构化图形"
+    },
+    {
+      "page": 8,
+      "title": "结论与下一步",
+      "objective": "围绕“完成中期答辩题目是基于CLIP的路面裂缝分割研究”推进第 8 页的信息表达",
+      "bullets": [
+        "服务对象：答辩",
+        "使用场景：答辩",
+        "风格方向：学术答辩风"
+      ],
+      "visual_hint": "咨询风信息卡片 + 结构化图形"
+    },
+    {
+      "page": 9,
+      "title": "补充页 9",
+      "objective": "围绕“完成中期答辩题目是基于CLIP的路面裂缝分割研究”推进第 9 页的信息表达",
+      "bullets": [
+        "服务对象：答辩",
+        "使用场景：答辩",
+        "风格方向：学术答辩风"
+      ],
+      "visual_hint": "咨询风信息卡片 + 结构化图形"
+    },
+    {
+      "page": 10,
+      "title": "补充页 10",
+      "objective": "围绕“完成中期答辩题目是基于CLIP的路面裂缝分割研究”推进第 10 页的信息表达",
+      "bullets": [
+        "服务对象：答辩",
+        "使用场景：答辩",
+        "风格方向：学术答辩风"
+      ],
+      "visual_hint": "咨询风信息卡片 + 结构化图形"
+    }
+  ],
+  "design_spec": {
+    "theme": "完成中期答辩题目是基于CLIP的路面裂缝分割研究 演示文稿",
+    "style_objective": "学术答辩风",
+    "color_scheme": "深墨蓝 + 米白 + 青绿色强调",
+    "typography": "中文标题加粗，正文保持 14-16pt 可读性",
+    "imagery": "MVP 以结构图和数据块为主，减少无关装饰图",
+    "page_count_strategy": "建议控制在 10 页左右，突出重点信息分层",
+    "notes": "画布格式：ppt169；目标受众：答辩；图标策略：优先使用线性图标与几何示意"
+  },
+  "logs": [
+    {
+      "timestamp": "2026-03-25T16:16:50.579693",
+      "stage": "project",
+      "level": "success",
+      "message": "项目已创建并初始化目录"
+    },
+    {
+      "timestamp": "2026-03-25T16:18:01.587103",
+      "stage": "brief",
+      "level": "success",
+      "message": "需求简报已保存"
+    },
+    {
+      "timestamp": "2026-03-25T16:18:09.061675",
+      "stage": "planning",
+      "level": "success",
+      "message": "已生成大纲、页级规划和设计规格"
+    },
+    {
+      "timestamp": "2026-03-25T16:18:09.068730",
+      "stage": "svg",
+      "level": "success",
+      "message": "SVG 草稿已生成"
+    }
+  ],
+  "export_file": null
+}
