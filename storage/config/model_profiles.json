@@ -2,9 +2,9 @@
 {
   "id": "openai-default",
   "provider_name": "openai",
-  "display_name": "OpenAI 默认配置",
-  "base_url": "https://ai.qaq.al/v1",
-  "api_key": "https://ai.qaq.al",
+  "display_name": "OpenAI 兼容默认配置",
+  "base_url": "https://free.luciferai.cc/v1",
+  "api_key": "sk-5PVdM0FSX0BkzaRo6uChUadSgtYXsvfzc45VDvG3ni7qcNZ6",
   "model_name": "gpt-5.4",
   "stage_mapping": {
     "brief": "gpt-5.4",
@@ -17,7 +17,7 @@
   "id": "deepseek-default",
   "provider_name": "deepseek",
   "display_name": "DeepSeek 默认配置",
-  "base_url": "https://api.deepseek.com",
+  "base_url": "https://api.deepseek.com/v1",
   "api_key": "",
   "model_name": "deepseek-chat",
   "stage_mapping": {

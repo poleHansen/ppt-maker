@@ -24,6 +24,7 @@ export default function ModelsPage() {
   const [selectedId, setSelectedId] = useState<string>("");
   const [form, setForm] = useState<ModelProfile>(emptyProfile);
   const [message, setMessage] = useState<string | null>(null);
+  const [messageTone, setMessageTone] = useState<"neutral" | "success" | "error">("neutral");
 
   useEffect(() => {
     listModelProfiles()
@@ -34,7 +35,10 @@ export default function ModelsPage() {
           setForm(items[0]);
         }
       })
-      .catch((error) => setMessage(error.message));
+      .catch((error) => {
+        setMessage(error.message);
+        setMessageTone("error");
+      });
   }, []);
 
   function selectProfile(profileId: string) {
@@ -63,6 +67,7 @@ export default function ModelsPage() {
 
   async function handleSave() {
     setMessage(null);
+    setMessageTone("neutral");
     const payload = { ...form, id: form.id || `${form.provider_name || "custom"}-${Date.now()}` };
     try {
       const updated = await saveModelProfile(payload);
@@ -70,30 +75,53 @@ export default function ModelsPage() {
       setSelectedId(payload.id);
       setForm(updated.find((item) => item.id === payload.id) ?? payload);
       setMessage("模型配置已保存。")
+      setMessageTone("success");
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "保存失败");
+      setMessageTone("error");
     }
   }
 
   async function handleValidate() {
     setMessage(null);
+    setMessageTone("neutral");
     try {
       const result = await validateModelProfile(form);
-      setMessage(result.message);
+      const details = [result.message];
+      if (result.resolved_model) {
+        details.push(`模型: ${result.resolved_model}`);
+      }
+      if (typeof result.latency_ms === "number") {
+        details.push(`耗时: ${result.latency_ms}ms`);
+      }
+      setMessage(details.join(" | "));
+      setMessageTone(result.ok ? "success" : "error");
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "校验失败");
+      setMessageTone("error");
     }
   }
 
   function handleCreateNew() {
     setSelectedId("");
     setForm(emptyProfile);
-    setMessage("正在创建新的模型配置。")
+    setMessage("正在创建新的模型配置。");
+    setMessageTone("neutral");
   }
+
+  function handleApiKeyChange(event: ChangeEvent<HTMLInputElement>) {
+    setForm((current) => ({ ...current, api_key: event.target.value }));
+  }
+
+  const messageClassName = messageTone === "error"
+    ? "text-sm text-red-600"
+    : messageTone === "success"
+      ? "text-sm text-emerald-700"
+      : "text-sm text-slate-600";
 
   return (
     <AppShell>
-      <SectionCard title="模型配置" description="把模型档案从只读展示升级为可编辑、可持久化的配置中心，支持阶段映射与基础校验。">
+      <SectionCard title="模型配置" description="把模型档案升级为真实可用的模型配置中心，支持 OpenAI 兼容接口、真实连通性测试和后续业务复用。">
         <div className="mb-6 flex flex-wrap gap-3">
           <button className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white" onClick={handleCreateNew} type="button">
             新建配置
@@ -104,7 +132,7 @@ export default function ModelsPage() {
           <button className="rounded-full border border-teal-700 px-6 py-3 text-sm font-semibold text-teal-800" onClick={handleSave} type="button">
             保存配置
           </button>
-          {message ? <span className="text-sm text-slate-600">{message}</span> : null}
+          {message ? <span className={messageClassName}>{message}</span> : null}
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
@@ -150,7 +178,8 @@ export default function ModelsPage() {
             </label>
             <label className="grid gap-2 text-sm text-slate-700">
               <span className="font-medium text-slate-900">API Key</span>
-              <input className="rounded-2xl border border-slate-200 bg-white px-4 py-3" onChange={handleFieldChange("api_key")} value={form.api_key ?? ""} />
+              <input className="rounded-2xl border border-slate-200 bg-white px-4 py-3" onChange={handleApiKeyChange} placeholder="保存后会以掩码显示；留空表示不修改已有密钥" type="password" value={form.api_key ?? ""} />
+              <span className="text-xs text-slate-500">使用 OpenAI 兼容接口。Base URL 可填写到 /v1，系统会自动尝试 /responses，并在不支持时回退到 /chat/completions。</span>
             </label>
             <div className="grid gap-3 md:grid-cols-3">
               {Object.entries(form.stage_mapping).map(([stage, model]) => (

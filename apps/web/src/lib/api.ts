@@ -100,6 +100,9 @@ export type ModelValidationResponse = {
   profile_id: string;
   ok: boolean;
   message: string;
+  provider_name: string;
+  resolved_model: string;
+  latency_ms?: number | null;
 };
 
 export type SlidePreview = {

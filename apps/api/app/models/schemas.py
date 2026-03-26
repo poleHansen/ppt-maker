@@ -37,6 +37,16 @@ class ModelValidationResponse(BaseModel):
     profile_id: str
     ok: bool
     message: str
+    provider_name: str = ""
+    resolved_model: str = ""
+    latency_ms: int | None = None
+
+
+class ModelInvocationResult(BaseModel):
+    provider_name: str
+    model_name: str
+    content: str
+    latency_ms: int
 
 
 class ProjectCreate(BaseModel):
